@@ -1,0 +1,264 @@
+@import "./variables.css";
+@import "./reset.css";
+
+/* BASE */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-hero);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+/* LINKS */
+
+a {
+  transition:
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* BUTTONS */
+
+button {
+  color: inherit;
+}
+
+/* SELECTION */
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* FOCUS */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* RESPONSIVE TYPOGRAPHY */
+
+/* Tablet */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+
+
+/* LAYOUT */
+
+.page-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding-inline: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-inline: var(--space-6);
+  }
+}
+
+
+/* SECTION */
+.section {
+  width: 100%;
+  padding: var(--section-padding-mobile);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--section-padding-desktop);
+  }
+}
+
+
+
+
+
+
+/* COMMON COMPONENTS */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  padding: var(--space-3) var(--space-5);
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button--secondary {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-surface-hover);
+}
+
+/* Badge */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: var(--space-1) var(--space-3);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  background-color: var(--color-surface);
+
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Card */
+
+.card {
+  padding: var(--space-5);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background-color: var(--color-surface);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card:hover {
+  background-color: var(--color-surface-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Section Heading */
+
+.section-heading {
+  margin-bottom: var(--space-7);
+}
+
+.section-heading h2 {
+  margin-bottom: var(--space-3);
+}
+
+.section-heading p {
+  max-width: 650px;
+}
+
+/* Social Links */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.social-links a {
+  color: var(--color-text-muted);
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+}
